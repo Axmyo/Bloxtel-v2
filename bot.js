@@ -3,6 +3,9 @@ const Discord = require("discord.js"),
    prefix = ";",
    token = "";
 
+const config = require("./config.json");
+
+
 client.on("ready",async() =>{
    console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
    client.user.setActivity (`${client.guilds.size} guilds.`, {type:3})
@@ -140,4 +143,4 @@ client.on('message', message => {
 
 });
 
-client.login('Njc3MjU3NDgwNzQ0NzMwNjI0.Xk1oZQ.oPbi4Z8GDRvcFntFoZilo6ITy3U');
+client.login(config.token);
